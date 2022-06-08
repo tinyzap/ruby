@@ -1,8 +1,17 @@
 module Imageomatic
-  module OpenGraph
+  module Opengraph
+    extend ActiveSupport::Concern
+
+    included do
       before_action :assign_opengraph_fallback_formats, if: :opengraph_request?
       before_action :assign_opengraph_defaults
 
+      helper Imageomatic::OpengraphTagHelper
+
+      helper_method :og, :opengraph
+    end
+
+    protected
       def assign_opengraph_fallback_formats
         request.formats = [ :opengraph, :html ]
       end
@@ -15,16 +24,13 @@ module Imageomatic
         url_for(format: :opengraph)
       end
 
-      Opengraph = Struct.new(:title, :image, :description)
-
-      helper_method :og, :opengraph
       def opengraph
-        @opengraph ||= Opengraph.new
+        @opengraph ||= Model.new
       end
       alias :og :opengraph
 
       def assign_opengraph_defaults
-        og.image ||= url_for(format: :opengraph)
+        opengraph.image ||= url_for_opengraph_image
       end
   end
 end

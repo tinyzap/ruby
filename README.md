@@ -8,22 +8,26 @@ The easiest way to make Rails applications look great in Apple Messages, Faceboo
 From the root of your Rails application, run:
 
 ```bash
-bundle add "imageomatic"
+$ bundle add "imageomatic"
 ```
 
-Then run:
-
-```bash
-rails imageomatic:install
-```
-
-This command adds the following to your `ApplicationController`:
+Then add to your application controller:
 
 ```ruby
 class ApplicationController < ActionController::Base
-  include Imageomatic::OpenGraph
+  include Imageomatic::Opengraph
 end
 ```
+
+Add to your `app/views/layouts/application.html.erb` file:
+
+```
+<head>
+  <%= opengraph_tags %>
+</head>
+```
+
+That's it for basic Open Graph image support! You can see what it looks like by appending `.opengraph` to the end of a request. For example, if you have `/posts/:id`, append `/posts/:id.opengraph` and you'll get to preview what it looks like in all browsers.
 
 ## License
 
