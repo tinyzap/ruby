@@ -8,7 +8,7 @@ module Imageomatic
 
       helper Imageomatic::OpengraphTagHelper
 
-      helper_method :og, :opengraph
+      helper_method :opengraph
     end
 
     protected
@@ -27,7 +27,6 @@ module Imageomatic
       def opengraph
         @opengraph ||= Model.new
       end
-      alias :og :opengraph
 
       def assign_opengraph_defaults
         opengraph.image ||= url_for_opengraph_image

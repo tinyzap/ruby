@@ -1,0 +1,11 @@
+Description:
+    Installs Imageomatic in Rails
+
+Example:
+    bin/rails generate install:imageomatic
+
+    Creates the files:
+        app/views/layouts/application.opengraph.html
+
+    Patches ApplicationController by adding:
+        include Imageomatic::Opengraph
