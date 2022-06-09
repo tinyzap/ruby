@@ -1,5 +1,7 @@
 # Imageomatic
 
+[![Ruby](https://github.com/imageomatic/ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/imageomatic/ruby/actions/workflows/ruby.yml)
+
 The easiest way to make Rails applications look great in Apple Messages, Facebook, LinkedIn, Twitter, and any other website that use Open Graph.
 
 
