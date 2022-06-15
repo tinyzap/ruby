@@ -2,5 +2,5 @@ require "imageomatic/version"
 require "imageomatic/engine"
 
 module Imageomatic
-  # Your code goes here...
+  autoload :UrlSignature, "imageomatic/url_signature"
 end
