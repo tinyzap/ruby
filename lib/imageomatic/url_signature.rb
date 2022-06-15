@@ -1,6 +1,5 @@
 require "openssl"
 require "uri"
-require "pathname"
 
 module Imageomatic
   class UrlSignature
@@ -25,9 +24,17 @@ module Imageomatic
       signature == sign(path)
     end
 
+    def url_for(path, **query)
+      path = URI(path).tap do |url|
+        url.path = path
+        url.query = query.to_query
+      end
+      signed_url path
+    end
+
     private
       def signed_path(path)
-        File.join(path_prefix, sign(File.join("/", path)), path)
+        File.join(path_prefix, sign(File.join("/", path.to_s)), path.to_s)
       end
 
       def sign(data)
