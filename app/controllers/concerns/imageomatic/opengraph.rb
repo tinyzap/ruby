@@ -2,6 +2,8 @@ module Imageomatic
   module Opengraph
     extend ActiveSupport::Concern
 
+    DEFAULT_OPENGRAPH_TYPE = "website".freeze
+
     included do
       before_action :assign_opengraph_fallback_formats, if: :opengraph_request?
       before_action :assign_opengraph_defaults
@@ -30,6 +32,7 @@ module Imageomatic
 
       def assign_opengraph_defaults
         opengraph.image ||= url_for_opengraph_image
+        opengraph.type ||= DEFAULT_OPENGRAPH_TYPE
       end
   end
 end

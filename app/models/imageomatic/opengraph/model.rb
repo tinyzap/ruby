@@ -1,6 +1,6 @@
 module Imageomatic
   module Opengraph
-    class Model < Struct.new(:title, :image, :description)
+    class Model < Struct.new(:title, :image, :description, :type)
       include ActionView::Helpers::OutputSafetyHelper
 
       def metatags
