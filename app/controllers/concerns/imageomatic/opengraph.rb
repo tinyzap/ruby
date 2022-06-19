@@ -23,7 +23,7 @@ module Imageomatic
       end
 
       def url_for_opengraph_image
-        url_for(format: :opengraph)
+        Imageomatic.client.url_signature.url_for "opengraph", url: url_for(format: :opengraph)
       end
 
       def opengraph
