@@ -12,6 +12,10 @@ module Imageomatic
       @client ||= Client.new
     end
 
+    def key_generator
+      @key_generator ||= KeyGenerator.new
+    end
+
     def configure(&block)
       block.call client.configuration
     end

@@ -17,8 +17,4 @@ module Imageomatic
       generate environment, :secret
     end
   end
-
-  def self.key_generator
-    @key_generator ||= KeyGenerator.new
-  end
 end

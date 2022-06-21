@@ -12,4 +12,8 @@ class Imageomatic::InstallGenerator < Rails::Generators::Base
   def copy_layout
     copy_file "application.opengraph.erb", "app/views/layouts/application.opengraph.erb"
   end
+
+  def copy_configuration_file
+    template "imageomatic.rb.tt", "config/initializers/imageomatic.rb"
+  end
 end
