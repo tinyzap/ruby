@@ -1,3 +1,5 @@
+require "securerandom"
+
 module Imageomatic
   # Generates random keys for environments.
   class KeyGenerator
@@ -20,7 +22,7 @@ module Imageomatic
     end
 
     def env_vars
-      puts <<~ENVARS
+      <<~ENVARS
       IMAGEOMATC_SECRET_KEY=#{secret_key}
       IMAGEOMATC_PUBLIC_KEY=#{public_key}
       ENVARS
