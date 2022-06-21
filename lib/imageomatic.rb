@@ -12,8 +12,8 @@ module Imageomatic
       @client ||= Client.new
     end
 
-    def key_generator
-      @key_generator ||= KeyGenerator.new
+    def key_generator(environment: Rails.env)
+      @key_generator ||= KeyGenerator.new(environment: environment)
     end
 
     def configure(&block)

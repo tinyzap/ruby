@@ -5,16 +5,37 @@ module Imageomatic
     DELIMITER = "_".freeze
     ENVIRONMENT = :development
 
+    attr_reader :environment
+
+    def initialize(environment: ENVIRONMENT)
+      @environment = environment
+    end
+
+    def public_key
+      generate :public
+    end
+
+    def secret_key
+      generate :secret
+    end
+
+    def env_vars
+      puts <<~ENVARS
+      IMAGEOMATC_SECRET_KEY=#{secret_key}
+      IMAGEOMATC_PUBLIC_KEY=#{public_key}
+      ENVARS
+    end
+
     def generate(*scopes)
-      scopes.append(SecureRandom.hex(LENGTH)).join(DELIMITER)
+      scopes
+        .prepend(environment)
+        .append(random)
+        .join(DELIMITER)
     end
 
-    def public_key(environment: ENVIRONMENT)
-      generate environment, :public
-    end
-
-    def secret_key(environment: ENVIRONMENT)
-      generate environment, :secret
-    end
+    private
+      def random
+        SecureRandom.hex(LENGTH)
+      end
   end
 end
