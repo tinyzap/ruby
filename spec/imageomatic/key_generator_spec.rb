@@ -14,6 +14,8 @@ describe Imageomatic::KeyGenerator do
     end
   end
   describe "#env_vars" do
-    expect(subject.env_vars).to match("IMAGEOMATIC_PUBLIC_KEY=development_public_")
+    it "generates" do
+      expect(subject.env_vars).to match("IMAGEOMATIC_PUBLIC_KEY=development_public_")
+    end
   end
 end

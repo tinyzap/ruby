@@ -23,8 +23,8 @@ module Imageomatic
 
     def env_vars
       <<~ENVARS
-      IMAGEOMATC_SECRET_KEY=#{secret_key}
-      IMAGEOMATC_PUBLIC_KEY=#{public_key}
+      IMAGEOMATIC_SECRET_KEY=#{secret_key}
+      IMAGEOMATIC_PUBLIC_KEY=#{public_key}
       ENVARS
     end
 
