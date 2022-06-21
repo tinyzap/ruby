@@ -4,6 +4,7 @@ module Imageomatic
 
     DEFAULT_OPENGRAPH_TYPE = "website".freeze
 
+    DEFAULT_OPENGRAPH_FALLBACK_FORMATS = [ :opengraph, :html ]
     included do
       before_action :assign_opengraph_fallback_formats, if: :opengraph_request?
       before_action :assign_opengraph_defaults
@@ -15,7 +16,7 @@ module Imageomatic
 
     protected
       def assign_opengraph_fallback_formats
-        request.formats = [ :opengraph, :html ]
+        request.formats = DEFAULT_OPENGRAPH_FALLBACK_FORMATS
       end
 
       def opengraph_request?
