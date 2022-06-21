@@ -4,6 +4,7 @@ require "imageomatic/engine"
 module Imageomatic
   autoload :Client,           "imageomatic/client"
   autoload :Configuration,    "imageomatic/configuration"
+  autoload :KeyGenerator,     "imageomatic/key_generator"
   autoload :UrlSignature,     "imageomatic/url_signature"
 
   class << self
