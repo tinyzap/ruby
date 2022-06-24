@@ -6,7 +6,7 @@ Imageomatic.configure do |config|
     # IMAGEOMATIC_SECRET_KEY=
     # IMAGEOMATIC_PUBLIC_KEY=
     # ```
-    config.load_env!
+    config.load_env
   else
     config.secret_key = "<%= Imageomatic.key_generator.secret_key %>"
     config.public_key = "<%= Imageomatic.key_generator.public_key %>"
