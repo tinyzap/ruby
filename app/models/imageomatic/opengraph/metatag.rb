@@ -4,7 +4,7 @@ module Imageomatic
       include ActionView::Helpers::TagHelper
 
       def to_html
-        tag :meta, property: "og:#{property}", content: content
+        tag :meta, property: property, content: content
       end
     end
   end

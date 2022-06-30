@@ -12,3 +12,4 @@ gem "sprockets-rails"
 # gem "debug", ">= 1.0.0"
 
 gem "rspec-rails", "~> 5.1"
+gem "pry"
