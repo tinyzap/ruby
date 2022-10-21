@@ -6,6 +6,7 @@ module Imageomatic
       property "og:image",        %[An image URL which should represent your object within the graph.]
       property "og:url",          %[The canonical URL of your object that will be used as its permanent ID in the graph, e.g., "https://www.imdb.com/title/tt0117500/".]
       property "og:description",  %[A one to two sentence description of your object.]
+      property "twitter",  %[A one to two sentence description of your object.]
 
       delegate :to_html, to: :metatag_mapper
 
@@ -15,6 +16,14 @@ module Imageomatic
 
       def image=(url)
         image.url = url
+      end
+
+      def twitter
+        @twitter ||= Twitter.new.tap do |twitter|
+          twitter.title = title
+          twitter.description = description
+          twitter.image = image.url
+        end
       end
 
       private

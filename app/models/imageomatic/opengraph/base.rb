@@ -6,13 +6,14 @@ module Imageomatic
       # Encapsulates OpenGraph properties and provides helpers that are
       # useful for documentation purposes or for reflecting on Ruby objects.
       class Property
-        attr_accessor :key, :name, :description
+        attr_accessor :key, :name, :description, :default
 
-        def initialize(key, description = nil)
+        def initialize(key, description = nil, default: nil)
           @key = key
           @description = description
           # If we get a string like `og:image:url`, this would give us `url`
           *_, @name = key.rpartition(":")
+          @default = default
         end
       end
 
@@ -41,7 +42,7 @@ module Imageomatic
       def properties
         Enumerator.new do |y|
           self.class.properties.each do |property|
-            y << [ property, self.send(property.name) ]
+            y << [ property, (self.send(property.name) || property.default) ]
           end
         end
       end
