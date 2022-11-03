@@ -16,7 +16,7 @@ $ bundle add "imageomatic"
 Then run:
 
 ```bash
-$ rails generate install:imageomatic
+$ rails generate imageomatic:install
 ```
 
 This creates a `app/views/layout/application.opengraph.erb` file and adds `include Imageomatic::Opengraph` to `ApplicationController`.
