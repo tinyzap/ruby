@@ -5,7 +5,10 @@ require "zeitwerk"
 module TinyZap
   Loader = Zeitwerk::Loader.for_gem.tap do |loader|
     loader.ignore "#{__dir__}/generators"
-    loader.inflector.inflect "tinyzap" => "TinyZap"
+    loader.inflector.inflect(
+      "tinyzap" => "TinyZap",
+      "cli" => "CLI"
+    )
     loader.setup
   end
 
