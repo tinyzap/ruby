@@ -23,8 +23,8 @@ module TinyZap
 
     def env_vars
       <<~ENVARS
-      IMAGEOMATIC_SECRET_KEY=#{secret_key}
-      IMAGEOMATIC_PUBLIC_KEY=#{public_key}
+      TINYZAP_SECRET_KEY=#{secret_key}
+      TINYZAP_PUBLIC_KEY=#{public_key}
       ENVARS
     end
 

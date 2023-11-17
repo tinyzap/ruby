@@ -15,7 +15,7 @@ describe TinyZap::KeyGenerator do
   end
   describe "#env_vars" do
     it "generates" do
-      expect(subject.env_vars).to match("IMAGEOMATIC_PUBLIC_KEY=development_public_")
+      expect(subject.env_vars).to match("TINYZAP_PUBLIC_KEY=development_public_")
     end
   end
 end

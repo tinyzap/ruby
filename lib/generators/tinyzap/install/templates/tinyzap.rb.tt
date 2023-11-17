@@ -3,8 +3,8 @@ TinyZap.configure do |config|
     # For production deployments, set the following environment keys:
     #
     # ```
-    # IMAGEOMATIC_SECRET_KEY=
-    # IMAGEOMATIC_PUBLIC_KEY=
+    # TINYZAP_SECRET_KEY=
+    # TINYZAP_PUBLIC_KEY=
     # ```
     config.load_env
   else

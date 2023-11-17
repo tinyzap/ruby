@@ -3,11 +3,11 @@ module TinyZap
     attr_accessor :secret_key, :public_key
 
     def load_secret_key_env
-      self.secret_key = ENV["IMAGEOMATIC_SECRET_KEY"]
+      self.secret_key = ENV["TINYZAP_SECRET_KEY"]
     end
 
     def load_public_key_env
-      self.public_key = ENV["IMAGEOMATIC_PUBLIC_KEY"]
+      self.public_key = ENV["TINYZAP_PUBLIC_KEY"]
     end
 
     def load_env
