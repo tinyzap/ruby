@@ -1,0 +1,11 @@
+Description:
+    Installs TinyZap in Rails
+
+Example:
+    bin/rails generate install:tinyzap
+
+    Creates the files:
+        app/views/layouts/application.opengraph.html
+
+    Patches ApplicationController by adding:
+        include TinyZap::Opengraph

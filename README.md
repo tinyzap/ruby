@@ -1,6 +1,6 @@
-# Imageomatic
+# TinyZap
 
-[![Ruby](https://github.com/imageomatic/ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/imageomatic/ruby/actions/workflows/ruby.yml)
+[![Ruby](https://github.com/tinyzap/ruby/actions/workflows/ruby.yml/badge.svg)](https://github.com/tinyzap/ruby/actions/workflows/ruby.yml)
 
 The easiest way to make Rails applications look great in Apple Messages, Facebook, LinkedIn, Twitter, and any other website that use Open Graph.
 
@@ -10,16 +10,16 @@ The easiest way to make Rails applications look great in Apple Messages, Faceboo
 From the root of your Rails application, run:
 
 ```bash
-$ bundle add "imageomatic"
+$ bundle add "tinyzap"
 ```
 
 Then run:
 
 ```bash
-$ rails generate imageomatic:install
+$ rails generate tinyzap:install
 ```
 
-This creates a `app/views/layout/application.opengraph.erb` file and adds `include Imageomatic::Opengraph` to `ApplicationController`.
+This creates a `app/views/layout/application.opengraph.erb` file and adds `include TinyZap::Opengraph` to `ApplicationController`.
 
 Add to your `app/views/layouts/application.html.erb` file:
 
@@ -76,7 +76,7 @@ Opengraph data may also be set from the view:
 
 ## Custom badges with Rails Views
 
-The real power in Imageomatic Open Graph is creating custom badges via the `opengraph` format in your rails views. For the example below, we'll create an Open Graph badge for a blog post. Assuming a blog application has a `/posts/:id` with a view at `app/views/posts/show.html.erb`, we'd create a new view with the `opengraph` format:
+The real power in TinyZap Open Graph is creating custom badges via the `opengraph` format in your rails views. For the example below, we'll create an Open Graph badge for a blog post. Assuming a blog application has a `/posts/:id` with a view at `app/views/posts/show.html.erb`, we'd create a new view with the `opengraph` format:
 
 ```bash
 $ touch ./app/views/posts/show.opengraph.erb
@@ -91,7 +91,7 @@ Open the file and add something like:
 <p>This article will take <%= time_to_read @post.body %> minutes to read</p>
 ```
 
-The Imageomatic screenshot service will take a screenshot of the content at this URL and use it for the Open Graph image.
+The TinyZap screenshot service will take a screenshot of the content at this URL and use it for the Open Graph image.
 
 ## License
 

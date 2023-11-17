@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    imageomatic (0.1.4)
+    tinyzap (0.1.4)
       rails (>= 7.0.0)
       thor (>= 1.0.0)
 
@@ -181,7 +181,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  imageomatic!
+  tinyzap!
   pry
   rspec-rails (~> 5.1)
   sprockets-rails

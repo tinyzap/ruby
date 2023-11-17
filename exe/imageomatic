@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-require "imageomatic"
-
-Imageomatic::CLI.start ARGV

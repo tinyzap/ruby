@@ -1,2 +1,2 @@
-Imageomatic::Engine.routes.draw do
+TinyZap::Engine.routes.draw do
 end

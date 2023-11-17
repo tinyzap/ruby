@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Imageomatic::Engine => "/imageomatic"
+  mount TinyZap::Engine => "/tinyzap"
 end
