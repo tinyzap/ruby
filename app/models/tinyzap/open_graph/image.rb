@@ -1,5 +1,5 @@
 module TinyZap
-  module Opengraph
+  module OpenGraph
     class Image < Base
       property "og:image:url",        "Identical to og:image."
       property "og:image:secure_url", "An alternate url to use if the webpage requires HTTPS."

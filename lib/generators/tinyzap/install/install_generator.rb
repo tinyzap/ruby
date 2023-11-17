@@ -3,7 +3,7 @@ class TinyZap::InstallGenerator < Rails::Generators::Base
 
   def include_controller_helper
     inject_into_file 'app/controllers/application_controller.rb', after: "class ApplicationController < ActionController::Base\n" do <<-'RUBY'
-  include TinyZap::Opengraph
+  include TinyZap::OpenGraph
 
     RUBY
     end

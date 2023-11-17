@@ -1,6 +1,6 @@
 module TinyZap
-  module Opengraph
-    # Provides a way to specify OpenGraph keys for an OpengraphModel, which can later
+  module OpenGraph
+    # Provides a way to specify OpenGraph keys for an OpenGraphModel, which can later
     # be iterated upon to generate OpenGraph meta tags.
     class Base
       # Encapsulates OpenGraph properties and provides helpers that are

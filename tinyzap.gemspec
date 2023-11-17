@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", ">= 7.0.0"
   spec.add_dependency "thor", ">= 1.0.0"
+  spec.add_dependency "zeitwerk", "~> 2.5"
 end

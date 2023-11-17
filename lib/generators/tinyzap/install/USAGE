@@ -8,4 +8,4 @@ Example:
         app/views/layouts/application.opengraph.html
 
     Patches ApplicationController by adding:
-        include TinyZap::Opengraph
+        include TinyZap::OpenGraph

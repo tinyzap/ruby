@@ -19,7 +19,7 @@ Then run:
 $ rails generate tinyzap:install
 ```
 
-This creates a `app/views/layout/application.opengraph.erb` file and adds `include TinyZap::Opengraph` to `ApplicationController`.
+This creates a `app/views/layout/application.opengraph.erb` file and adds `include TinyZap::OpenGraph` to `ApplicationController`.
 
 Add to your `app/views/layouts/application.html.erb` file:
 
@@ -62,7 +62,7 @@ end
 
 ### View
 
-Opengraph data may also be set from the view:
+OpenGraph data may also be set from the view:
 
 ```erb
 <%

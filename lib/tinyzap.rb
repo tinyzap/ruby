@@ -1,12 +1,13 @@
 require "tinyzap/version"
 require "tinyzap/engine" if defined? Rails
+require "zeitwerk"
 
 module TinyZap
-  autoload :CLI,              "tinyzap/cli"
-  autoload :Client,           "tinyzap/client"
-  autoload :Configuration,    "tinyzap/configuration"
-  autoload :KeyGenerator,     "tinyzap/key_generator"
-  autoload :UrlSignature,     "tinyzap/url_signature"
+  Loader = Zeitwerk::Loader.for_gem.tap do |loader|
+    loader.ignore "#{__dir__}/generators"
+    loader.inflector.inflect "tinyzap" => "TinyZap"
+    loader.setup
+  end
 
   class << self
     def client

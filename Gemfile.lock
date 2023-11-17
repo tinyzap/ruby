@@ -4,6 +4,7 @@ PATH
     tinyzap (0.1.4)
       rails (>= 7.0.0)
       thor (>= 1.0.0)
+      zeitwerk (~> 2.5)
 
 GEM
   remote: https://rubygems.org/
@@ -91,6 +92,7 @@ GEM
     marcel (1.0.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.5)
     minitest (5.15.0)
     net-imap (0.3.1)
       net-protocol
@@ -101,11 +103,8 @@ GEM
     net-smtp (0.3.2)
       net-protocol
     nio4r (2.5.8)
-    nokogiri (1.13.6-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.6-x86_64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.13.6-x86_64-linux)
+    nokogiri (1.13.6)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pry (0.14.1)
       coderay (~> 1.1)
@@ -177,15 +176,16 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-22
   x86_64-darwin-20
   x86_64-linux
 
 DEPENDENCIES
-  tinyzap!
   pry
   rspec-rails (~> 5.1)
   sprockets-rails
   sqlite3
+  tinyzap!
 
 BUNDLED WITH
    2.3.13

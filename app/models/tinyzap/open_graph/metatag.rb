@@ -1,5 +1,5 @@
 module TinyZap
-  module Opengraph
+  module OpenGraph
     class Metatag < Struct.new(:property, :content)
       include ActionView::Helpers::TagHelper
 

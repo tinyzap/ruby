@@ -1,5 +1,5 @@
 module TinyZap
-  module Opengraph
+  module OpenGraph
     extend ActiveSupport::Concern
 
     DEFAULT_OPENGRAPH_TYPE = "website".freeze
@@ -9,7 +9,7 @@ module TinyZap
       before_action :assign_opengraph_fallback_formats, if: :opengraph_request?
       before_action :assign_opengraph_defaults
 
-      helper TinyZap::OpengraphTagHelper
+      helper TinyZap::OpenGraphTagHelper
 
       helper_method :opengraph
     end

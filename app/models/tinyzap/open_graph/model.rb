@@ -1,5 +1,5 @@
 module TinyZap
-  module Opengraph
+  module OpenGraph
     class Model < Base
       property "og:title",        %[The title of your object as it should appear within the graph, e.g., "The Rock".]
       property "og:type",         %[The type of your object, e.g., "video.movie". Depending on the type you specify, other properties may also be required.]

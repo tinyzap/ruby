@@ -1,5 +1,5 @@
 module TinyZap
-  module Opengraph
+  module OpenGraph
     # Iterates recursively through an OpenGraph object and gets a bunch of
     # metatags and keys.
     class MetatagMapper

@@ -1,5 +1,5 @@
 module TinyZap
-  module Opengraph
+  module OpenGraph
     class Twitter < Base
       property "twitter:card",        "Type of card, which is 'summary_large_image'", default: "summary_large_image"
       property "twitter:site",        "Twitter @handle of the account"
