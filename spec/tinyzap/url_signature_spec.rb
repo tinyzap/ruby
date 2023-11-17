@@ -9,7 +9,7 @@ describe TinyZap::UrlSignature do
   let(:tampered_url) { URI.join(signed_url, "blarny!") }
 
   it "signs URL" do
-    expect(signed_url.to_s).to eql "https://www.tinyzap.com/v1/my-account/f90c842d59d53be70829f246b3610e9432cb2c50b0eac5b709f2654dfa5889db/opengraph/super/badge?foo=bar"
+    expect(signed_url.to_s).to eql "https://tinyzap.com/v1/my-account/f90c842d59d53be70829f246b3610e9432cb2c50b0eac5b709f2654dfa5889db/opengraph/super/badge?foo=bar"
   end
 
   describe "#url_for" do

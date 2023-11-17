@@ -15,7 +15,7 @@ module TinyZap
     end
 
     def signed_url(path)
-      URI.join("https://www.tinyzap.com/", signed_path(path))
+      URI.join("https://tinyzap.com/", signed_path(path))
     end
 
     def valid?(url)

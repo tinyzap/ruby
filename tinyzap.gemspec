@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = TinyZap::VERSION
   spec.authors     = ["Brad Gessler"]
   spec.email       = ["brad@tinyzap.com"]
-  spec.homepage    = "https://www.tinyzap.com/"
+  spec.homepage    = "https://tinyzap.com/"
   spec.summary     = "Easiest way to generate fresh images for Rails applications."
   spec.description = spec.summary
   spec.license     = "MIT"
