@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.summary     = "Easiest way to generate fresh images for Rails applications."
   spec.description = spec.summary
   spec.license     = "MIT"
-  
+
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   spec.metadata["allowed_push_host"] = "https://rubygems.org/"
@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
-  spec.add_dependency "rails", ">= 7.0.0"
+  spec.add_dependency "rails", "~> 7.0"
   spec.add_dependency "thor", ">= 1.0.0"
   spec.add_dependency "zeitwerk", "~> 2.5"
 end
